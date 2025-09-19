@@ -17,7 +17,7 @@ function createVehicle(fotoInp,nombreInp,marcaInp,modeloInp,kmInp,precioInp){
     item.classList.add('col-md-6' , 'item-vehiculos');
 
     const div2 = document.createElement('div');
-    div2.classList.add('car' , 'h-100');
+    div2.classList.add('card' , 'h-100');
 
     const img =document.createElement('img');
     img.setAttribute('src', fotoInp);
@@ -77,7 +77,7 @@ function createVehicle(fotoInp,nombreInp,marcaInp,modeloInp,kmInp,precioInp){
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
 
-    const fotoInp= foto.value.trim();
+    const fotoInp= foto.value.trim() || 'https://cdn.pixabay.com/photo/2012/04/12/23/47/car-30984_1280.png'; 
     const nombreInp= nombre.value.trim();
     const marcaInp= marca.value.trim();
     const modeloInp= modelo.value.trim();
@@ -91,6 +91,8 @@ form.addEventListener('submit', (e)=>{
         const newCard = createVehicle(fotoInp, nombreInp, marcaInp, modeloInp, kmInp, precioInp);
 
         contCards.appendChild(newCard);
+
+        eventsItemCard(newCard);
 
         foto.value = "";
         nombre.value = "";
@@ -108,3 +110,21 @@ form.addEventListener('submit', (e)=>{
     }
 
 });
+
+function eventsItemCard(item){
+    const buyBtn = item.querySelector('button');
+    const deleteBtn = item.querySelector('.btn-danger');
+
+
+
+    buyBtn.addEventListener('click', () =>{
+        alert('Felicidades, has comprado este vehiculo. Pronto nos pondremos en contacto contigo.')
+    })
+
+    deleteBtn.addEventListener('click', () =>{
+        item.remove();
+
+    })
+
+    
+}
