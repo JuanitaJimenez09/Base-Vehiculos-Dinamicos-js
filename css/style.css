@@ -1,0 +1,110 @@
+body {
+    background: #1a1a1a; 
+    color: #e0e0e0;     
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+h2 {
+    color: #ffcc00; 
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 5px;
+}
+
+
+#form {
+    background: #262626;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+#form label {
+    color: #ffcc00;
+    font-weight: 500;
+}
+
+#form input {
+    background: #333;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+#form input:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 8px rgba(255,204,0,0.7);
+}
+
+
+#addBtn {
+    background: #ffcc00;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#addBtn:hover {
+    background: #e6b800;
+    transform: scale(1.05);
+}
+
+
+.card {
+    background: #262626;
+    border: 1px solid #444;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.9);
+}
+
+.card-title {
+    color: #ffcc00;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    color: #bbb !important;
+}
+
+.card-text {
+    color: #ddd;
+    font-size: 0.95rem;
+}
+
+.text-success {
+    color: #00ff66 !important; 
+    font-weight: bold;
+}
+
+
+.card .btn-success {
+    background: #00cc55;
+    border: none;
+    transition: 0.3s;
+}
+
+.card .btn-success:hover {
+    background: #00ff66;
+    transform: scale(1.05);
+}
+
+.card .btn-danger {
+    background: #cc0000;
+    border: none;
+    transition: 0.3s;
+}
+
+.card .btn-danger:hover {
+    background: #ff1a1a;
+    transform: scale(1.05);
+}
