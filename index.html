@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehículo-js</title>
+    <title>Vehiculos-js</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">    
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -21,40 +22,40 @@
                     <!-- Foto (URL) -->
                     <div class="mb-3">
                         <label for="foto" class="form-label">Foto (URL)</label>
-                        <input type="url" id="foto"  class="form-control"  placeholder="https://ejemplo.com/auto.jpg">
+                        <input type="url" id="foto-url" class="form-control" placeholder="https://ejemplo.com/auto.jpg">
                     </div>
 
                     <!-- Nombre -->
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text"  id="nombre"  class="form-control"  placeholder="Ej: Corolla">
+                        <input type="text" id="nombre" class="form-control" placeholder="Ej: Corolla">
                     </div>
 
                     <!-- Marca -->
                     <div class="mb-3">
                         <label for="marca" class="form-label">Marca</label>
-                        <input type="text"  id="marca"  class="form-control"  placeholder="Ej: Toyota">
+                        <input type="text" id="marca" class="form-control" placeholder="Ej: Toyota">
                     </div>
 
                     <!-- Modelo -->
                     <div class="mb-3">
                         <label for="modelo" class="form-label">Modelo</label>
-                        <input type="text"  id="modelo"  class="form-control"  placeholder="Ej: 2021">
+                        <input type="text" id="modelo" class="form-control" placeholder="Ej: 2021">
                     </div>
 
                     <!-- Kilometraje -->
                     <div class="mb-3">
                         <label for="kilometraje" class="form-label">Kilometraje</label>
-                        <input type="number"  id="km"   class="form-control"  placeholder="Ej: 35000">
+                        <input type="number" id="km-car" class="form-control" placeholder="Ej: 35000">
                     </div>
 
                     <!-- Precio -->
                     <div class="mb-3">
                         <label for="precio" class="form-label">Precio ($)</label>
-                        <input type="number"  id="precio" class="form-control"  placeholder="Ej: 50000000">
+                        <input type="number" id="precio" class="form-control" placeholder="Ej: 50000000">
                     </div>
 
-                    <button type="submit"  id="add-btn" class="btn btn-primary">Agregar Vehículo</button>
+                    <button type="submit" id="add-btn" class="btn btn-primary">Agregar Vehículo</button>
                 </form>
             </div>
 
@@ -65,7 +66,8 @@
                     <!-- Ejemplo de tarjeta -->
                     <!-- <div class="col-md-6 item-vehiculo">
                         <div class="card h-100">
-                            <img src="https://www.buyatoyota.com/sharpr/bat/assets/img/vehicle-info/Corolla/2026/hero-image.png" class="card-img-top w-100" alt="Foto vehículo">
+                            <img src="https://www.buyatoyota.com/sharpr/bat/assets/img/vehicle-info/Corolla/2026/hero-image.png"
+                                class="card-img-top w-100" alt="Foto vehículo">
                             <div class="card-body">
                                 <h3 class="card-title">Corolla</h3>
                                 <h4 class="card-subtitle text-muted">Toyota</h4>
@@ -85,10 +87,20 @@
         </div>
     </section>
 
+    <button id="btn-shop"><i class="bi bi-cart"></i></button>
+
+    <div id="side-bar">
+        <h2>Carrito</h2>
+        <div id="content-cars">
+
+        </div>
+        <h2>Total <span id="total-carrito">$0</span></h2>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-        <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

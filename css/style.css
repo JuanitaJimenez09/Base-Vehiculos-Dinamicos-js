@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-    background: #1a1a1a; 
-    color: #e0e0e0;     
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #1a1a1a;
+    color: #e0e0e0;
+    font-family: "Raleway", sans-serif;
+    overflow-x: hidden;
 }
 
 
 h2 {
-    color: #ffcc00; 
+    color: #ffcc00;
     font-weight: bold;
     text-transform: uppercase;
     border-bottom: 2px solid #ffcc00;
@@ -18,7 +21,7 @@ h2 {
     background: #262626;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 #form label {
@@ -32,14 +35,13 @@ h2 {
     color: #fff;
 }
 
-#form input::placeholder{
+#form input::placeholder {
     color: #fff;
 }
 
-
 #form input:focus {
     border-color: #ffcc00;
-    box-shadow: 0 0 8px rgba(255,204,0,0.7);
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.7);
 }
 
 
@@ -56,22 +58,22 @@ h2 {
     transform: scale(1.05);
 }
 
-#cont-cards{
+
+#cont-cards {
     padding: 0 50px;
 }
-
 
 .card {
     background: #262626;
     border: 1px solid #444;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
     transition: 0.3s ease-in-out;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.9);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.9);
 }
 
 .card-title {
@@ -91,13 +93,13 @@ h2 {
 }
 
 .text-success {
-    color:#e6b800 !important; 
+    color: #e6b800 !important;
     font-weight: bold;
 }
 
 
 .card .btn-success {
-    background: #e6b800;
+    background: #ffcc00;
     border: none;
     transition: 0.3s;
     color: #000;
@@ -117,4 +119,79 @@ h2 {
 .card .btn-danger:hover {
     background: #ff1a1a;
     transform: scale(1.05);
+}
+
+#btn-shop {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    background: none;
+    right: 14px;
+    top: 12px;
+    z-index: 999;
+}
+
+#btn-shop i {
+    color: #ffcc00;
+    font-size: 30px;
+    position: relative;
+}
+
+#side-bar {
+    background: #1a1a1a;
+    position: fixed;
+    height: 100vh;
+    width: 25%;
+    border: 2px solid #ffcc00;
+    right: -100%;
+    top: 5px;
+    border-radius: 10px;
+    transition: right .5s ease;
+}
+
+#side-bar.active{
+    right: 10px;
+    z-index: 1;
+}
+
+#side-bar h2 {
+    padding: 11px;
+}
+
+.shop {
+    width: 95%;
+    margin: 0 auto;
+    border: 1px solid #ffcc00;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #222; 
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+}
+
+
+#content-cars img {
+    width: 100%;
+}
+
+#content-cars h2 {
+    border-bottom: none;
+}
+
+#content-cars button{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: #ffcc00;
+    border-radius: 50%;
+}
+
+.col-down{
+    display: flex;
+    align-items: center;
+}
+
+.col-down button{
+    justify-content: space-between;
 }
