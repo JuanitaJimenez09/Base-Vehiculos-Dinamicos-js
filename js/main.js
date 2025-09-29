@@ -91,18 +91,26 @@ form.addEventListener('submit', (e) => {
         alert('No se puede crear una tarjeta vacia');
     } else {
         const newCard = createVehicleCard(fotoInp, nombreInp, marcaInp, modeloInp, kmInp, precioInp);
-
+        
         contCards.appendChild(newCard);
 
         eventsItemCard(newCard)
 
-        foto.value = "";
-        nombre.value = "";
-        marca.value = "";
-        modelo.value = "";
-        km.value = "";
-        precio.value = "";
+        const nuevoCards = {
+            nombre: nombreInp,
+            marca : marcaInp,
+            modelo: modeloInp,
+            km: kmInp,
+            precio: precioInp
+
+        }
+        const carsGuardados = JSON.parse(localStorage.getItem('carros')) || [];
+        carsGuardados.push(nuevoCards)
+
+        localStorage.setItem('carros' , JSON.stringify(carsGuardados))
+        form.reset();
     }
+
 });
 
 function eventsItemCard(item) {
@@ -147,7 +155,20 @@ btnCar.addEventListener('click', () => {
     }
 })
 
-function createCarShop(fotoInp, nombreInp, marcaInp, precioInp) {
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+function createCarShop(fotoInp, nombreInp, marcaInp,precioInp) {
+   
+
+    const item = {
+        foto: fotoInp.getAttribute('src'),
+        nombre: nombreInp,
+        marca: marcaInp,
+        precio: precioInp
+    };
+
+    carrito.push(item);
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+
     const card = document.createElement('div');
     card.classList.add('row');
     card.classList.add('shop')
@@ -167,7 +188,7 @@ function createCarShop(fotoInp, nombreInp, marcaInp, precioInp) {
 
     const h4 = document.createElement('h4');
     h4.textContent = marcaInp;
-
+    
     const div2 = document.createElement('div');
     div2.classList.add('row', 'col-down');
 
